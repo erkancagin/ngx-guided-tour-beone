@@ -1,6 +1,6 @@
 {
-    "name": "ngx-guided-tour-demo",
-    "version": "0.0.0",
+    "name": "ngx-guided-tour-beone",
+    "version": "0.0.1",
     "scripts": {
         "ng": "ng",
         "start": "ng serve",

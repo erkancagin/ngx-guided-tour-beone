@@ -1,6 +1,6 @@
 {
     "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
-    "dest": "../../dist/ngx-guided-tour",
+    "dest": "../../dist/ngx-guided-tour-beone",
     "lib": {
         "entryFile": "src/public_api.ts"
     }
