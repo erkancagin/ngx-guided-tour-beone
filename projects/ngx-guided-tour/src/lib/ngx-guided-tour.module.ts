@@ -5,16 +5,13 @@ import { CommonModule } from '@angular/common';
 
 @NgModule({
     declarations: [
-        //GuidedTourComponent
+    //GuidedTourComponent
     ],
     imports: [
         CommonModule
     ],
     exports: [
-        //GuidedTourComponent
-    ],
-    entryComponents: [
-        //GuidedTourComponent
+    //GuidedTourComponent
     ]
 })
 export class NgxGuidedTourModule {

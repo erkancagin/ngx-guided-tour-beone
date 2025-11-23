@@ -166,6 +166,5 @@
                 }
             }
         }
-    },
-    "defaultProject": "ngx-guided-tour-beone"
+    }
 }
