@@ -58,18 +58,18 @@
                 "serve": {
                     "builder": "@angular-devkit/build-angular:dev-server",
                     "options": {
-                        "browserTarget": "ngx-guided-tour-beone:build"
+                      "buildTarget": "ngx-guided-tour-beone:build"
                     },
                     "configurations": {
                         "production": {
-                            "browserTarget": "ngx-guided-tour-beone:build:production"
+                          "buildTarget": "ngx-guided-tour-beone:build:production"
                         }
                     }
                 },
                 "extract-i18n": {
                     "builder": "@angular-devkit/build-angular:extract-i18n",
                     "options": {
-                        "browserTarget": "ngx-guided-tour-beone:build"
+                      "buildTarget": "ngx-guided-tour-beone:build"
                     }
                 },
                 "test": {
