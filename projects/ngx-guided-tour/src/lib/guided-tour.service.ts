@@ -1,9 +1,9 @@
 import { debounceTime } from 'rxjs/operators';
-import { ErrorHandler, Inject, Injectable } from '@angular/core';
+import { ErrorHandler, Inject, Injectable, DOCUMENT } from '@angular/core';
 import { Observable, Subject, fromEvent } from 'rxjs';
 import { GuidedTour, TourStep, Orientation, OrientationConfiguration } from './guided-tour.constants';
 import { cloneDeep } from 'lodash';
-import { DOCUMENT } from "@angular/common";
+
 import { WindowRefService } from "./windowref.service";
 
 @Injectable()
