@@ -55,8 +55,8 @@ ngx-guided-tour {
   .tour-step {
       position: fixed;
       &.page-tour-step {
-          max-width: 400px;
-          width: 50%;
+          max-width: 600px;
+          width: 90%;
           left: 50%;
           top: 50%;
           transform: translate(-50%, -50%)
@@ -126,7 +126,8 @@ ngx-guided-tour {
       }
 
       .tour-block {
-          padding: 15px 25px;
+          padding: 15px 15px;
+          border-radius: 4px;
       }
 
       .tour-progress-indicator {
@@ -134,7 +135,7 @@ ngx-guided-tour {
       }
 
       .tour-title {
-          font-weight: bold !important;
+          font-weight: medium !important;
           padding-bottom: 20px;
       }
 

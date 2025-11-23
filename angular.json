@@ -27,7 +27,6 @@
                             "projects/ngx-guided-tour/src/lib/guided-tour-base-theme.scss"
                         ],
                         "baseHref": "/ngx-guided-tour/",
-                        "deployUrl": "/ngx-guided-tour/",
                         "scripts": []
                     },
                     "configurations": {
@@ -41,7 +40,6 @@
                             "optimization": true,
                             "outputHashing": "all",
                             "sourceMap": false,
-                            "extractCss": true,
                             "namedChunks": false,
                             "aot": true,
                             "extractLicenses": true,

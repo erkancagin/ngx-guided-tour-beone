@@ -99,8 +99,8 @@ import { WindowRefService } from "./windowref.service";
 })
 export class GuidedTourComponent implements AfterViewInit, OnDestroy {
     @Input() public topOfPageAdjustment ?= 0;
-    @Input() public tourStepWidth ?= 300;
-    @Input() public minimalTourStepWidth ?= 200;
+    @Input() public tourStepWidth ?= '600';
+    @Input() public minimalTourStepWidth ?= '300';
     @Input() public skipText ?= 'Skip';
     @Input() public nextText ?= 'Next';
     @Input() public doneText ?= 'Done';
@@ -122,10 +122,11 @@ export class GuidedTourComponent implements AfterViewInit, OnDestroy {
         public guidedTourService: GuidedTourService,
         private windowRef: WindowRefService,
         @Inject(DOCUMENT) private dom: any
-    ) { }
+    ) { 
+    }
 
     private get maxWidthAdjustmentForTourStep(): number {
-        return this.tourStepWidth - this.minimalTourStepWidth;
+        return +this.tourStepWidth - +this.minimalTourStepWidth;
     }
 
     private get widthAdjustmentForScreenBound(): number {
@@ -136,15 +137,15 @@ export class GuidedTourComponent implements AfterViewInit, OnDestroy {
         if (this.calculatedLeftPosition < 0) {
             adjustment = -this.calculatedLeftPosition;
         }
-        if (this.calculatedLeftPosition > this.windowRef.nativeWindow.innerWidth - this.tourStepWidth) {
-            adjustment = this.calculatedLeftPosition - (this.windowRef.nativeWindow.innerWidth - this.tourStepWidth);
+        if (this.calculatedLeftPosition > this.windowRef.nativeWindow.innerWidth - +this.tourStepWidth) {
+            adjustment = this.calculatedLeftPosition - (this.windowRef.nativeWindow.innerWidth - +this.tourStepWidth);
         }
 
         return Math.min(this.maxWidthAdjustmentForTourStep, adjustment);
     }
 
     public get calculatedTourStepWidth() {
-        return this.tourStepWidth - this.widthAdjustmentForScreenBound;
+        return +this.tourStepWidth - this.widthAdjustmentForScreenBound;
     }
 
     public ngAfterViewInit(): void {
@@ -325,7 +326,7 @@ export class GuidedTourComponent implements AfterViewInit, OnDestroy {
             this.currentTourStep.orientation === Orientation.TopRight
             || this.currentTourStep.orientation === Orientation.BottomRight
         ) {
-            return (this.selectedElementRect.right - this.tourStepWidth);
+            return (this.selectedElementRect.right - +this.tourStepWidth);
         }
 
         if (
@@ -336,14 +337,14 @@ export class GuidedTourComponent implements AfterViewInit, OnDestroy {
         }
 
         if (this.currentTourStep.orientation === Orientation.Left) {
-            return this.selectedElementRect.left - this.tourStepWidth - paddingAdjustment;
+            return this.selectedElementRect.left - +this.tourStepWidth - paddingAdjustment;
         }
 
         if (this.currentTourStep.orientation === Orientation.Right) {
             return (this.selectedElementRect.left + this.selectedElementRect.width + paddingAdjustment);
         }
 
-        return (this.selectedElementRect.right - (this.selectedElementRect.width / 2) - (this.tourStepWidth / 2));
+        return (this.selectedElementRect.right - (this.selectedElementRect.width / 2) - (+this.tourStepWidth / 2));
     }
 
     public get leftPosition(): number {

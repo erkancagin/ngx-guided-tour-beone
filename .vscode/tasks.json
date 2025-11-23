@@ -1,0 +1,19 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "build:lib",
+			"group": "build",
+			"problemMatcher": [],
+			"label": "npm: build library",
+			"detail": "ng build library"
+		},
+		{
+			"type": "npm",
+			"script": "start",
+			"problemMatcher": [],
+			"label": "Run NGX Guided Tour"
+	    }
+	]
+}

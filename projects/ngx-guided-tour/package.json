@@ -1,7 +1,7 @@
 {
-    "name": "ngx-guided-tour",
-    "version": "2.0.1",
-    "description": "Guided tour for your Angular applications.",
+    "name": "ngx-product-tour-7",
+    "version": "1.0.0",
+    "description": "Modified version of ngx-guided-tour package. Guided tour for your Angular applications.",
     "peerDependencies": {
         "@angular/common": ">=13.0.0",
         "@angular/core": ">=13.0.0",
@@ -9,7 +9,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/lsqlabs/ngx-guided-tour.git"
+        "url": "git+https://github.com/erkancagin/ngx-guided-tour.git"
     },
     "keywords": [
         "guided",
@@ -31,9 +31,9 @@
     },
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/lsqlabs/ngx-guided-tour/issues"
+        "url": "https://github.com/erkancagin/ngx-guided-tour/issues"
     },
-    "homepage": "https://github.com/lsqlabs/ngx-guided-tour#readme",
+    "homepage": "https://github.com/erkancagin/ngx-guided-tour#readme",
     "ngPackage": {
       "lib": {
         "entryFile": "src/public_api.ts"
